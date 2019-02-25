@@ -1,0 +1,198 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/*Google font integration*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+ .image-aboutus-banner {
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("../../assets/field.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding-top: 110px;
+    padding-bottom:110px;
+    height: 500px;
+ }
+
+ .image-aboutus-sm-banner {
+      background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding-top: 30px;
+    padding-bottom:30px;
+ }
+
+ .lg-text {
+    font: size 32;
+    font-weight: 600;
+    text-transform: none;
+    color:#fff;
+    
+}
+.image-aboutus-para {
+    color:#fff;
+}
+
+.card-deck{
+     left: 30%;
+    right: 30%;
+    padding: 10%;
+}
+
+.d-block{
+    height:300px;
+
+}
+
+.modal-content{
+    background-image: url("/src/assets/images/hh.jpg");
+    border-color: blue;
+    background-color: rgb(236, 247, 248);
+}
+
+
+
+  .container {
+    width:900px;
+    margin:25px auto 0;
+    display:flex;
+    margin-bottom:10px;
+}
+.container .box {
+    position:relative;
+    height: 50px;
+    width: 100px;
+    margin-left:150px;
+    
+    margin-bottom:10px;
+    box-sizing:border-box;
+    text-align:center;
+    background:#e614c3;
+    overflow:hidden;
+    border-radius:4px;
+    box-shadow:0 0 0 2px rgb(231, 161, 210);
+}
+.container .box .icon {
+    width:100%;
+    height:100%;
+    background:#380231;
+    transition: 0.5s;
+}
+.container .box .icon .fa {
+    font-size: 2em;
+    
+    line-height:50px;
+    color: rgb(241, 209, 236);
+}
+.container .box:hover .icon {
+    transform:scale(0);
+}
+.container .box .details {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#5c0248;
+    transition:0.5s;
+    transform:scale(2);
+    opacity:0;
+}
+.container .box:hover .details {
+    transform:scale(1);
+    opacity:1;
+}
+.container .box .details h3 {
+    margin:0;
+    padding:0;
+    line-height:50px;
+    font-size:10px;
+    color:#fff;
+}
+.container .box .details:nth-child(2) .details {
+    background:#e91e63;
+}
+.container .box .details:nth-child(2) .details {
+    background:#d4275b;
+}
+
+section{
+	padding: 60px 0;
+}
+section .section-title{
+	text-align:center;
+	color:#007b5e;
+	margin-bottom:50px;
+	text-transform:uppercase;
+}
+#what-we-do{
+	background:#ffffff;
+}
+#what-we-do .card{
+	padding: 1rem!important;
+	border: none;
+	margin-bottom:1rem;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#what-we-do .card:hover{
+	-webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+	-moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+	box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+#what-we-do .card .card-block{
+	padding-left: 50px;
+    position: relative;
+}
+#what-we-do .card .card-block a{
+	color: #007b5e !important;
+	font-weight:700;
+	text-decoration:none;
+}
+#what-we-do .card .card-block a i{
+	display:none;
+	
+}
+#what-we-do .card:hover .card-block a i{
+	display:inline-block;
+	font-weight:700;
+	
+}
+#what-we-do .card .card-block:before{
+	font-family: FontAwesome;
+    position: absolute;
+    font-size: 39px;
+    color: #007b5e;
+    left: 0;
+	-webkit-transition: -webkit-transform .2s ease-in-out;
+    transition:transform .2s ease-in-out;
+}
+#what-we-do .card .block-1:before{
+    content: "\f0e7";
+}
+#what-we-do .card .block-2:before{
+    content: "\f0eb";
+}
+#what-we-do .card .block-3:before{
+    content: "\f00c";
+}
+#what-we-do .card .block-4:before{
+    content: "\f209";
+}
+#what-we-do .card .block-5:before{
+    content: "\f0a1";
+}
+#what-we-do .card .block-6:before{
+    content: "\f218";
+}
+#what-we-do .card:hover .card-block:before{
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);	
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+
+.container-fluid{
+    border: green;
+}
