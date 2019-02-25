@@ -1,15 +1,13 @@
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-/*Google font integration*/
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+
  .image-aboutus-banner {
-    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("../../assets/field.jpg");
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("../../assets/health.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     color: #fff;
     padding-top: 110px;
     padding-bottom:110px;
-    height: 500px;
+    height: 400px;
  }
 
  .image-aboutus-sm-banner {
@@ -33,9 +31,10 @@
 }
 
 .card-deck{
-     left: 30%;
-    right: 30%;
-    padding: 10%;
+     margin-left: 100px;
+    margin-right: 100px;
+    padding: 5%;
+    
 }
 
 .d-block{
@@ -44,7 +43,7 @@
 }
 
 .modal-content{
-    background-image: url("/src/assets/images/hh.jpg");
+    background-image: url("/src/assets/hh.jpg");
     border-color: blue;
     background-color: rgb(236, 247, 248);
 }
@@ -66,7 +65,7 @@
     margin-bottom:10px;
     box-sizing:border-box;
     text-align:center;
-    background:#e614c3;
+    background:#4abff5;
     overflow:hidden;
     border-radius:4px;
     box-shadow:0 0 0 2px rgb(231, 161, 210);
@@ -74,7 +73,7 @@
 .container .box .icon {
     width:100%;
     height:100%;
-    background:#380231;
+    background:#1d025c;
     transition: 0.5s;
 }
 .container .box .icon .fa {
@@ -92,7 +91,7 @@
     left:0;
     width:100%;
     height:100%;
-    background:#5c0248;
+    background:#1d025c;
     transition:0.5s;
     transform:scale(2);
     opacity:0;
@@ -109,23 +108,23 @@
     color:#fff;
 }
 .container .box .details:nth-child(2) .details {
-    background:#e91e63;
+    background:blue;
 }
 .container .box .details:nth-child(2) .details {
-    background:#d4275b;
+    background:blue;
 }
 
 section{
-	padding: 60px 0;
+	padding: 10px 0;
 }
-section .section-title{
+.section-title{
 	text-align:center;
 	color:#007b5e;
 	margin-bottom:50px;
 	text-transform:uppercase;
 }
 #what-we-do{
-	background:#ffffff;
+    background: url("../../assets/bg.png");
 }
 #what-we-do .card{
 	padding: 1rem!important;
@@ -196,3 +195,4 @@ section .section-title{
 .container-fluid{
     border: green;
 }
+
