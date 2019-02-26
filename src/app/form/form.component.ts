@@ -11,8 +11,6 @@ export class FormComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
-
-
     this.donateForm = this.fb.group({
       username: this.fb.control('', [Validators.required]),
       email: this.fb.control('', [Validators.required, Validators.email]),

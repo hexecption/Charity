@@ -16,7 +16,7 @@
         <label for="email">Email</label>
         <br>
         <input type="email" formControlName="email" placeholder="Email ID">
-        <span *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.invalidEmail">
+        <span *ngIf="email.dirty && email.invalid && email.errors.invalidEmail">
           Value has to be a valid email address.
         </span>
         <span *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.required">
@@ -39,20 +39,23 @@
       <br>
       <br>
       <div class="form-control">
-        <label for="email">Amount</label>
+        <label for="amount">Amount</label>
         <br>
         <input type="amount" formControlName="amount" placeholder="amount">
-        <span *ngIf="(amount.touched ||amount.dirty) && amount.invalid && email.errors.required">
+        <span *ngIf="(amount.touched ||amount.dirty) && amount.invalid && amount.errors.required">
           Amount is required.
+        </span>
+        <span *ngIf="(amount.touched ||amount.dirty) && amount.invalid && amount.errors.invalidNumber">
+          Amount is invalid.
         </span>
       </div>
       <br>
       <br>
-      <button [disabled]="!donateForm.valid" (click)="log()" data-toggle="modal"  data-target="#myModal">Submit</button>
+      <button [disabled]="!donateForm.valid" (click)="log()" data-toggle="modal" data-target="#myModal">Submit</button>
     </div>
   </form>
 </div>
-<div >
+<div>
 
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -69,4 +72,3 @@
 
     </div>
   </div>
-
