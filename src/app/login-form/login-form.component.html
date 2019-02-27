@@ -1,6 +1,6 @@
 <div class="container">
   <h3>Registration form</h3>
-  <form [formGroup]="registerForm">
+  <form [formGroup]="registerForm" (ngSubmit)="sendDonor()">
     <div class="form-group">
       <div class="form-control">
         <label for="username">Username</label>
@@ -67,12 +67,12 @@
       </div>
       <br>
       <br>
-      <button [disabled]="!registerForm.valid" (click)="log()">Submit</button> <!-- data-toggle="modal" data-target="#myModal">-->
+      <button [disabled]="!registerForm.valid" >Submit</button> <!-- data-toggle="modal" data-target="#myModal">-->
     </div>
   </form>
 </div>
-<div>
-
+<!-- <div>
+(click)="log()"
     <div class="modal-dialog">
 
 
@@ -87,4 +87,4 @@
 
     </div>
   </div>  
- 
+  -->

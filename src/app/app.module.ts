@@ -12,6 +12,7 @@ import { StoriesComponent } from './stories/stories.component';
 import { ContactComponent } from './contact/contact.component';
 import { DataService } from './data.service';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
