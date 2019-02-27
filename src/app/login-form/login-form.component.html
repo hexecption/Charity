@@ -29,7 +29,7 @@
         <span *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.invalidEmail">
           Value has to be a valid email address.
         </span>
-        
+
         <span *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.required">
           Email is required.
         </span>
@@ -67,15 +67,13 @@
       </div>
       <br>
       <br>
-      <button [disabled]="!registerForm.valid" >Submit</button> <!-- data-toggle="modal" data-target="#myModal">-->
+      <button [disabled]="!registerForm.valid" data-toggle="modal" data-target="#myModal">Submit</button>
     </div>
   </form>
 </div>
-<!-- <div>
-(click)="log()"
-    <div class="modal-dialog">
-
-
+<div>
+  <div class="modal-dialog">
+    <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-content">
         <div class="modal-body">
           <h3>Thank You for registering</h3>
@@ -86,5 +84,4 @@
       </div>
 
     </div>
-  </div>  
-  -->
+  </div>
