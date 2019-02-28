@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { DataService } from '../data.service';
+// import * as jsPDF from 'jspdf';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -9,40 +10,67 @@ import { DataService } from '../data.service';
 export class FormComponent implements OnInit {
   // categories = ['Welfare', 'Education', 'Orphanage'];
   donateForm: FormGroup;
-  constructor(private fb: FormBuilder,private svc:DataService) { }
+  randNum: number;
+  constructor(private fb: FormBuilder, private svc: DataService) { }
 
   ngOnInit() {
     this.donateForm = this.fb.group({
       donorAcc: this.fb.control('', [Validators.required]),
       managerAcc: this.fb.control('', [Validators.required]),
-      amount: this.fb.control('', [Validators.required,Validators.min(100)]),
-      token:this.fb.control(''),
-      manager:this.fb.control('',Validators.required)
+      amount: this.fb.control('', [Validators.required, Validators.min(100)]),
+      token: this.fb.control(''),
+      manager: this.fb.control('', Validators.required)
     });
 
+  }
+
+  // public downloadPDF() {
+  //   let doc = new jsPDF();
+
+  //   let specialElementHandlers = {
+  //     '#editor': function (element, renderer) {
+  //       return true;
+  //     }
+  //   }
+
+  //   let content = this.content.nativeElement;
+
+  //   doc.fromHTML(content.innerHTML, 15, 15, {
+  //     'width': 190,
+  //     'elementhandlers': specialElementHandlers
+  //   });
+
+  //   doc.save('test.pdf');
+  // }
+
+  randomInt(min, max) {
+    this.randNum = Math.floor(Math.random() * (max - min + 1));
+    console.log(this.randNum);
+    //this.fb.control.token=this.randNum;
   }
   log() {
     console.log(this.donateForm.value);
   }
-  sendTrans(){
+  sendTrans() {
     console.log(this.donateForm.value);
     this.svc.postTransaction(this.donateForm.value)
-    .subscribe(resp=>console.log(resp));
+      .subscribe(resp => console.log(resp),
+        error => console.log(error));
   }
   get donorAcc() {
     return this.donateForm.get('donorAcc');
   }
-  get amount(){
+  get amount() {
     return this.donateForm.get('amount');
   }
-  get managerAcc(){
+  get managerAcc() {
     return this.donateForm.get('managerAcc');
   }
-  get manager(){
+  get manager() {
     return this.donateForm.get('manager');
-  }  
-  get token(){
+  }
+  get token() {
     return this.donateForm.get('token');
   }
- 
+
 }

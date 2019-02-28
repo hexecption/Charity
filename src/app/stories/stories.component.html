@@ -1,41 +1,80 @@
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="box"	style= "top: 50%">
-	<i class="fa fa-quote-left fa2" aria-hidden="true"></i>
-	<div class="text">
-		<i class="fa fa-quote-right fa1" aria-hidden="true"></i>			
-		<div>
-			<h1>Prakash Prajapati </h1>
-			<p>Excepteur sint occaecat cupidatat proident, 
-			sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
-
-	</div>
+<div id="result">
+    <div class="thumbnail">
+        <img src="https://pbs.twimg.com/profile_images/44488162/oscar-small-sq_400x400.jpg" alt="" />
+    </div>
+    <blockquote>
+        <p id="quote">xxxx</p>
+    </blockquote>
+    <div class="attribution">
+        <p id="author">Oscar Wilde</p>
+        <p id="work"></p>
+    </div>
 </div>
 
-<div class="box"	style= "top:120%" >
-	<i class="fa fa-quote-left fa2" aria-hidden="true"></i>
-	<div class="text">
-		<i class="fa fa-quote-right fa1" aria-hidden="true"></i>			
-		<div>
-			<h1>Prakash Prajapati </h1>
-			<p>Excepteur sint occaecat cupidatat proident, 
-			sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
-
-	</div>
+<div id="result">
+    <div class="thumbnail">
+        <img src="https://pbs.twimg.com/profile_images/44488162/oscar-small-sq_400x400.jpg" alt="" />
+    </div>
+    <blockquote>
+        <p id="quote">xxxx</p>
+    </blockquote>
+    <div class="attribution">
+        <p id="author">Oscar Wilde</p>
+        <p id="work"></p>
+    </div>
+</div>
+	
+<div id="result">
+    <div class="thumbnail">
+        <img src="https://pbs.twimg.com/profile_images/44488162/oscar-small-sq_400x400.jpg" alt="" />
+    </div>
+    <blockquote>
+        <p id="quote">xxxx</p>
+    </blockquote>
+    <div class="attribution">
+        <p id="author">Oscar Wilde</p>
+        <p id="work"></p>
+    </div>
 </div>
 
-<div class="box"	style= "top:190%" >
-	<i class="fa fa-quote-left fa2" aria-hidden="true"></i>
-	<div class="text">
-		<i class="fa fa-quote-right fa1" aria-hidden="true"></i>			
-		<div>
-			<h1>Prakash Prajapati </h1>
-			<p>Excepteur sint occaecat cupidatat proident, 
-			sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		</div>
+<script>
+    $(function() {
+    generate();
+    $("#button").bind("click", function() {
+        generate();
+    });
+});
 
-	</div>
-</div>
+var quotes = ["We are all in the gutter, but some of us are looking at the stars.@Lady Windermere's fan", "The truth is rarely pure and never simple.@The Importance of Being Earnest", "Experience is merely the name men gave to their mistakes.@The Picture of Dorian Gray", "I am so clever that sometimes I don't understand a single word of what I am saying.@The Happy Prince and Other Stories", "Yes: I am a dreamer. For a dreamer is one who can only find his way by moonlight, and his punishment is that he sees the dawn before the rest of the world.@The Critic as Artist", "Women are meant to be loved, not to be understood.@Lord Arthur Savile's Crime and Other Stories", "The very essence of romance is uncertainty.@The Importance of Being Earnest", "If you want to tell people the truth, make them laugh, otherwise they'll kill you.@The Nightingale and Rose", "I don't want to be at the mercy of my emotions. I want to use them, to enjoy them, and to dominate them.@The Picture of Dorian Gray", "All women become like their mothers. That is their tragedy. No man does, and that is his.@The Importance of Being Earnest", "It is absurd to divide people into good and bad. People are either charming or tedious.@Lady Windermere's Fan", "The only way to get rid of temptation is to yield to it.@The Picture of Dorian Gray", "To love oneself is the beginning of a lifelong romance.@An Ideal Husband", "Nowadays people know the price of everything and the value of nothing.@The Picture of Dorian Gray", "There is only one thing in the world worse than being talked about, and that is not being talked about.@The Picture of Dorian Gray", "Life is far too important a thing ever to talk seriously about.@Lady Windermere's Fan","Yes: I am a dreamer. For a dreamer is one who can only find his way by moonlight, and his punishment is that he sees the dawn before the rest of the world.@The Critic as Artist", "There is only one thing in the world worse than being talked about, and that is not being talked about.@The Picture of Dorian Gray", "When one is in love, one always begins by deceiving one's self, and one always ends by deceiving others. That is what the world calls a romance.@The Picture of Dorian Gray", "I like men who have a future and women who have a past@The Picture of Dorian Gray"];
+
+function generate() {
+    var num = Math.round(Math.random() * (quotes.length - 1));
+
+    var arr = quotes[num].split("@");
+    var quote = arr[0];
+    var work = arr[1];
+    $("#quote").animate({
+        left: "250px",
+        opacity: 0
+    }, "slow", "easeInOutCubic", function(){
+       $("#quote").animate({
+        left: 0,
+        opacity: 1
+    },"slow").html(quote); 
+    });
+    
+    $("#work").animate({
+        left: "250px",
+        opacity: 0
+    }, "slow", function(){
+       $("#work").animate({
+        left: 0,
+        opacity: 1
+    },"slow").html("From " + work); 
+    });
+    tweet();
+}
+
+</script>
