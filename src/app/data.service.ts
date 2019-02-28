@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Donor } from './donor.model';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { Transaction } from './transactiom.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,7 @@ import { Observable } from 'rxjs';
 export class DataService {
   // apiUrl='http://localhost:3000/api/Donor';
   d: Donor;
+  t: Transaction;
   constructor(private _http: HttpClient) { }
 
   postDonor(donor: any): Observable<any> {
@@ -18,10 +20,20 @@ export class DataService {
         console.log(data);
         this.d = data;
         console.log(this.d);
-
       })
       );
 
   }
+  postTransaction(trans: any): Observable<any> {
+    return this._http.post('', trans)
+      .pipe(map((data: Transaction) => {
+        console.log(data);
+        this.t = data;
+        console.log(this.t);
+      })
+      );
+
+  }
+
 
 }
