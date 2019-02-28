@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { StoriesComponent } from './stories/stories.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { LoginFormDoneeComponent } from './login-form-donee/login-form-donee.component';
 
 
 const routes: Routes = [
@@ -31,8 +32,12 @@ const routes: Routes = [
     component: FormComponent
   },
   {
-    path: 'register',
+    path: 'registerDonor',
     component: LoginFormComponent
+  },
+  {
+    path:'registerDonee',
+    component:LoginFormDoneeComponent
   }
 
 ];

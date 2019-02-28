@@ -24,6 +24,12 @@ export class LoginFormDoneeComponent implements OnInit {
 
     });
   }
+  sendDonee() {
+    console.log(this.registerForm.value);
+    this.svc.postDonor(this.registerForm.value)
+      .subscribe(resp => console.log(resp));
+  }
+
   get email() {
     return this.registerForm.get('email');
   }

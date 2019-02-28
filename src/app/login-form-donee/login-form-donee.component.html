@@ -1,5 +1,5 @@
 <div class="container">
-  <h3>Registration form for donor</h3>
+  <h3>Registration form for donee</h3>
   <form [formGroup]="registerForm" (ngSubmit)="sendDonor()">
     <div class="form-group">
       <div class="form-control">
@@ -73,9 +73,9 @@
         <label *ngFor="let category of categories">
           <input type="radio" formControlName="category" [value]="category">{{category}}
         </label>
-        <span *ngIf="category.errors.required">
+        <!-- <span *ngIf="category.errors.required">
           category is required.
-        </span>
+        </span> -->
       </div>
       <br>
       <br>
@@ -93,6 +93,5 @@
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
-
   </div>
 </div>
