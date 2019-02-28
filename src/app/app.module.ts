@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DataService } from './data.service';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginFormDoneeComponent } from './login-form-donee/login-form-donee.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     StoriesComponent,
     ContactComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    LoginFormDoneeComponent
   ],
   imports: [
     BrowserModule,

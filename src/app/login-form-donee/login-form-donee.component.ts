@@ -1,39 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { DataService } from '.././data.service';
-@Component({
-  selector: 'app-login-form',
-  templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.scss']
-})
-export class LoginFormComponent implements OnInit {
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
+@Component({
+  selector: 'app-login-form-donee',
+  templateUrl: './login-form-donee.component.html',
+  styleUrls: ['./login-form-donee.component.scss']
+})
+export class LoginFormDoneeComponent implements OnInit {
+  categories = ['Welfare', 'Education', 'Orphanage'];
   registerForm: FormGroup;
   constructor(private fb: FormBuilder, private svc: DataService) { }
 
   ngOnInit() {
-
-
     this.registerForm = this.fb.group({
       username: this.fb.control('', [Validators.required]),
       name: this.fb.control('', [Validators.required]),
       email: this.fb.control('', [Validators.required, Validators.email]),
       phone: this.fb.control('', [Validators.required]),
       gender: this.fb.control('', [Validators.required]),
-      address: this.fb.control('', [Validators.required])
+      address: this.fb.control('', [Validators.required]),
+      category: this.fb.control('', [Validators.required])
 
     });
-    // ,Validators.pattern("[0-9]{0-10}"
   }
-  log() {
-    console.log(this.registerForm.value);
-  }
-  sendDonor() {
-    console.log(this.registerForm.value);
-    this.svc.postDonor(this.registerForm.value)
-      .subscribe(resp => console.log(resp));
-  }
-
   get email() {
     return this.registerForm.get('email');
   }
@@ -51,6 +41,9 @@ export class LoginFormComponent implements OnInit {
   }
   get address() {
     return this.registerForm.get('address');
+  }
+  get category() {
+    return this.registerForm.get('category');
   }
 
 }

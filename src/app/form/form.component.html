@@ -19,20 +19,7 @@
         <span *ngIf="(managerAcc.dirty || managerAcc.touched) && managerAcc.invalid && managerAcc.errors.required">
           Manager account is required.
         </span>
-
       </div>
-      <!-- <br>
-      <br> 
-      <div class="form-control">
-        <label>Category</label>
-        <br>
-        <label *ngFor="let category of categories">
-          <input type="radio" formControlName="category" [value]="category">{{category}}
-        </label> -->
-      <!-- <span *ngIf="category.errors.required">
-            category is required.
-          </span> 
-      </div>-->
       <br>
       <br>
       <div class="form-control">
@@ -48,7 +35,29 @@
       </div>
       <br>
       <br>
-      <button [disabled]="!donateForm.valid" data-toggle="modal" data-target="#myModal">Submit</button>
+      <div class="form-control">
+        <label for="token">Token</label>
+        <br>
+        <input type="token" formControlName="token" placeholder="Token">
+        <span *ngIf="(token.dirty || token.touched) && token.invalid && token.errors.required">
+          Token is required.
+        </span>
+
+      </div>
+      <br>
+      <br>
+      <div class="form-control">
+        <label for="manager">Manager Name</label>
+        <br>
+        <input type="manager" formControlName="manager" placeholder="Manager Name">
+        <span *ngIf="(manager.dirty || manager.touched) && manager.invalid && manager.errors.required">
+          manager name is required.
+        </span>
+
+      </div>
+      <br>
+      <br> 
+           <button [disabled]="!donateForm.valid" data-toggle="modal" data-target="#myModal">Submit</button>
     </div>
   </form>
 </div>
@@ -65,3 +74,15 @@
 
     </div>
   </div>
+
+   <!--<div class="form-control">
+        <label>Category</label>
+        <br>
+        <label *ngFor="let category of categories">
+          <input type="radio" formControlName="category" [value]="category">{{category}}
+        </label> -->
+      <!-- <span *ngIf="category.errors.required">
+            category is required.
+          </span> 
+      </div>-->
+     

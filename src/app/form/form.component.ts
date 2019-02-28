@@ -15,7 +15,9 @@ export class FormComponent implements OnInit {
     this.donateForm = this.fb.group({
       donorAcc: this.fb.control('', [Validators.required]),
       managerAcc: this.fb.control('', [Validators.required]),
-      amount: this.fb.control('', [Validators.required,Validators.min(100)])
+      amount: this.fb.control('', [Validators.required,Validators.min(100)]),
+      token:this.fb.control(''),
+      manager:this.fb.control('',Validators.required)
     });
 
   }
@@ -36,6 +38,11 @@ export class FormComponent implements OnInit {
   get managerAcc(){
     return this.donateForm.get('managerAcc');
   }
- 
+  get manager(){
+    return this.donateForm.get('manager');
+  }  
+  get token(){
+    return this.donateForm.get('token');
+  }
  
 }

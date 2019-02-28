@@ -67,20 +67,32 @@
       </div>
       <br>
       <br>
+      <div class="form-control">
+        <label>Category</label>
+        <br>
+        <label *ngFor="let category of categories">
+          <input type="radio" formControlName="category" [value]="category">{{category}}
+        </label>
+        <span *ngIf="category.errors.required">
+          category is required.
+        </span>
+      </div>
+      <br>
+      <br>
       <button [disabled]="!registerForm.valid" data-toggle="modal" data-target="#myModal">Submit</button>
     </div>
   </form>
 </div>
-  <div class="modal-dialog">
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-content">
-        <div class="modal-body">
-          <h3>Thank You for registering</h3>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
+<div class="modal-dialog">
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h3>Thank You for registering</h3>
       </div>
-
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
     </div>
+
   </div>
+</div>
