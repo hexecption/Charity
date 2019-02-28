@@ -10,6 +10,9 @@ import { CategoryComponent } from './category/category.component';
 import { FooterComponent } from './footer/footer.component';
 import { StoriesComponent } from './stories/stories.component';
 import { ContactComponent } from './contact/contact.component';
+import { DataService } from './data.service';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -21,15 +24,16 @@ import { ContactComponent } from './contact/contact.component';
     CategoryComponent,
     FooterComponent,
     StoriesComponent,
-    ContactComponent
-
+    ContactComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

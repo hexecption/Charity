@@ -1,0 +1,41 @@
+// .ng-valid{
+//     background-color: rgb(240, 245, 240);
+//   }
+
+.ng-invalid:not(form) {
+    background-color: rgb(255, 182, 193);
+  }
+input{
+    width: 100%;
+    color:black;
+
+}
+label{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    background: none;
+
+}
+.form-group{
+    border: none;
+}
+.form-control {
+    border: none;
+    background: none;
+}
+.container{
+    margin-top: 150px;
+  width: 30%;
+  z-index: 100;
+  /* background: white; */
+  background-color: lightblue;
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 10px;
+}
+button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}

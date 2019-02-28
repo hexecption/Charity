@@ -1,63 +1,59 @@
 <div class="container">
   <h3>Donation form</h3>
-  <form [formGroup]="donateForm">
+  <form [formGroup]="donateForm" (ngSubmit)="sendTrans()">
     <div class="form-group">
       <div class="form-control">
-        <label for="username">Username</label>
+        <label for="donorAcc">Donor Account</label>
         <br>
-        <input type="username" formControlName="username" placeholder=" Username">
-        <span *ngIf="(username.touched ||username.dirty) && username.invalid && username.errors.required">
-          Username is required.
+        <input type="donorAcc" formControlName="donorAcc" placeholder="Donor Account">
+        <span *ngIf="(donorAcc.touched ||donateForm.dirty) && donorAcc.invalid && donorAcc.errors.required">
+          Donor account no is required.
         </span>
       </div>
       <br>
       <br>
       <div class="form-control">
-        <label for="email">Email</label>
+        <label for="managerAcc">Manager Account</label>
         <br>
-        <input type="email" formControlName="email" placeholder="Email ID">
-        <span *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.invalidEmail">
-          Value has to be a valid email address.
-        </span>
-        <span *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.required">
-          Email is required.
+        <input type="managerAcc" formControlName="managerAcc" placeholder="Manager Account">
+        <span *ngIf="(managerAcc.dirty || managerAcc.touched) && managerAcc.invalid && managerAcc.errors.required">
+          Manager account is required.
         </span>
 
       </div>
-      <br>
-      <br>
+      <!-- <br>
+      <br> 
       <div class="form-control">
         <label>Category</label>
         <br>
         <label *ngFor="let category of categories">
           <input type="radio" formControlName="category" [value]="category">{{category}}
-        </label>
-        <!-- <span *ngIf="category.errors.required">
+        </label> -->
+      <!-- <span *ngIf="category.errors.required">
             category is required.
-          </span> -->
-      </div>
+          </span> 
+      </div>-->
       <br>
       <br>
       <div class="form-control">
-        <label for="email">Amount</label>
+        <label for="amount">Amount</label>
         <br>
         <input type="amount" formControlName="amount" placeholder="amount">
-        <span *ngIf="(amount.touched ||amount.dirty) && amount.invalid && email.errors.required">
+        <span *ngIf="(amount.touched ||amount.dirty) && amount.invalid && amount.errors.required">
           Amount is required.
+        </span>
+        <span *ngIf="(amount.touched ||amount.dirty) && amount.invalid && amount.errors.invalidNumber">
+          Amount is invalid.
         </span>
       </div>
       <br>
       <br>
-      <button [disabled]="!donateForm.valid" (click)="log()" data-toggle="modal"  data-target="#myModal">Submit</button>
+      <button [disabled]="!donateForm.valid" data-toggle="modal" data-target="#myModal">Submit</button>
     </div>
   </form>
 </div>
-<div >
-
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
-
-
       <div class="modal-content">
         <div class="modal-body">
           <h3>Thank You for your donation</h3>
@@ -69,4 +65,3 @@
 
     </div>
   </div>
-
