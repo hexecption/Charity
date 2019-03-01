@@ -14,6 +14,7 @@ import { DataService } from './data.service';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginFormDoneeComponent } from './login-form-donee/login-form-donee.component';
+import { DoneeAccComponent } from './donee-acc/donee-acc.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { LoginFormDoneeComponent } from './login-form-donee/login-form-donee.com
     StoriesComponent,
     ContactComponent,
     LoginFormComponent,
-    LoginFormDoneeComponent
+    LoginFormDoneeComponent,
+    DoneeAccComponent
   ],
   imports: [
     BrowserModule,
