@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { DataService } from '.././data.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
@@ -9,7 +10,7 @@ import { DataService } from '.././data.service';
 export class LoginFormComponent implements OnInit {
 
   registerForm: FormGroup;
-  constructor(private fb: FormBuilder, private svc: DataService) { }
+  constructor(private fb: FormBuilder, private svc: DataService,private router:Router) { }
 
   ngOnInit() {
 
@@ -29,9 +30,11 @@ export class LoginFormComponent implements OnInit {
     console.log(this.registerForm.value);
   }
   sendDonor() {
+
     console.log(this.registerForm.value);
     this.svc.postDonor(this.registerForm.value)
       .subscribe(resp => console.log(resp));
+      this.router.navigate['/donorAcc'];
   }
 
   get email() {
