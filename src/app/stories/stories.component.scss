@@ -13,7 +13,9 @@ p,
 }
 
 body {
-    background-color: rgba(252, 237, 202, 0.4); 
+	
+	height: 100%;
+    background-color:  #fff; 
     text-align: center;
 }
 
@@ -81,7 +83,7 @@ p,
 }
 
 #result blockquote:after  {
-	border-top-color: #c49696;
+	border-top-color: #08080800;
 	border-width: 10px;
 	left: 65%;
 	margin-left: -10px;
