@@ -17,6 +17,8 @@ import { LoginFormDoneeComponent } from './login-form-donee/login-form-donee.com
 import { DoneeAccComponent } from './donee-acc/donee-acc.component';
 import { DonorAccComponent } from './donor-acc/donor-acc.component';
 import { RankingComponent } from './ranking/ranking.component';
+import { OrderModule } from 'ngx-order-pipe';
+
 
 
 @NgModule({
@@ -39,7 +41,8 @@ import { RankingComponent } from './ranking/ranking.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    OrderModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
