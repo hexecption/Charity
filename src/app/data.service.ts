@@ -7,6 +7,8 @@ import { Transaction } from './transaction.model';
 import { Donee } from './donee.model';
 import { DoneeAcc } from './doneeAcc.model';
 import { DonorAcc } from './donorAcc.model';
+import { Track } from './track.model';
+// import { resource } from 'selenium-webdriver/http';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +19,7 @@ export class DataService {
   d1: Donee;
   d2: DoneeAcc;
   d3: DonorAcc;
+  // radhika:Donee[];
   constructor(private _http: HttpClient) { }
 
   postDonor(donor: any): Observable<any> {
@@ -46,6 +49,22 @@ export class DataService {
       })
       );
 
+  }
+
+  getDonee(){
+    return this._http.get<Donee[]>('http://localhost:3000/api/Donee');
+  }
+
+  getDonor(){
+    return this._http.get<Donor[]>('http://localhost:3000/api/Donor');
+  }
+
+  getTransaction(){
+    return this._http.get<Transaction[]>('http://localhost:3000/api/Donor_Manager');
+  }
+
+  getTrack(){
+    return this._http.get<Track[]>('http://localhost:3000/api/Manager_Donee');
   }
   postDonee(donee: any): Observable<any> {
 

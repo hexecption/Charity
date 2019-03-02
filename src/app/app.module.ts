@@ -18,9 +18,11 @@ import { DoneeAccComponent } from './donee-acc/donee-acc.component';
 import { DonorAccComponent } from './donor-acc/donor-acc.component';
 import { LoginFormManagerComponent } from './login-form-manager/login-form-manager.component';
 import { RankingComponent } from './ranking/ranking.component';
+import { OrderModule } from 'ngx-order-pipe';
 import { ManagerAccComponent } from './manager-acc/manager-acc.component';
 import { Form1Component } from './form1/form1.component';
 import { TimelineComponent } from './timeline/timeline.component';
+
 
 
 
@@ -43,12 +45,14 @@ import { TimelineComponent } from './timeline/timeline.component';
     ManagerAccComponent,
     Form1Component,
     TimelineComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    OrderModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
