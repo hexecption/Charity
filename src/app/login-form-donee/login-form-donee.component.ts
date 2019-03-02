@@ -13,7 +13,7 @@ export class LoginFormDoneeComponent implements OnInit {
   registerForm: FormGroup;
   constructor(private fb: FormBuilder, private svc: DataService, private router: Router) { }
 
-  ngOnInit() {http://localhost:3000/api/Donee
+  ngOnInit() {
     this.registerForm = this.fb.group({
       username: this.fb.control('', [Validators.required]),
       name: this.fb.control('', [Validators.required]),
@@ -29,10 +29,10 @@ export class LoginFormDoneeComponent implements OnInit {
     console.log(this.registerForm.value);
     this.svc.postDonee(this.registerForm.value)
       .subscribe(resp => console.log(resp));
-      this.router.navigate['/doneeAcc'];
-
   }
-
+  // navigateTo() {
+  //   this.router.navigate['doneeAcc'];
+  // }
   get email() {
     return this.registerForm.get('email');
   }

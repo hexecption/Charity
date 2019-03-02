@@ -28,7 +28,7 @@ export class DataService {
 
   }
 postDoneeAcc(doneeAccnt:any):Observable<any>{
-  return this._http.post('http://localhost:3000/api/Donor', doneeAccnt)
+  return this._http.post('http://localhost:3000/api/Donee_Account', doneeAccnt)
     .pipe(map((data: DoneeAcc) => {
       console.log(data);
       this.d2 = data;
