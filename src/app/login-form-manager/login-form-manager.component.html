@@ -1,0 +1,85 @@
+<div class="container">
+    <h3>Registration form for Manager</h3>
+    <form [formGroup]="registerForm" (ngSubmit)="sendManager()">
+      <div class="form-group">
+        <div class="form-control">
+          <label for="username">Username</label>
+          <br>
+          <input type="username" formControlName="username" placeholder=" Username">
+          <span *ngIf="(username.touched ||username.dirty) && username.invalid && username.errors.required">
+            Username is required.
+          </span>
+        </div>
+        <br>
+        <br>
+        <div class="form-control">
+          <label for="name">Name</label>
+          <br>
+          <input type="name" formControlName="name" placeholder=" Name">
+          <span *ngIf="(name.touched ||name.dirty) && name.invalid && name.errors.required">
+            Name is required.
+          </span>
+        </div>
+        <br>
+        <br>
+        <div class="form-control">
+          <label for="email">Email</label>
+          <br>
+          <input type="email" formControlName="email" placeholder="Email ID">
+          <span *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.invalidEmail">
+            Value has to be a valid email address.
+          </span>
+  
+          <span *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.required">
+            Email is required.
+          </span>
+  
+        </div>
+        <br>
+        <br>
+        <div class="form-control">
+          <label for="phone">Phone</label>
+          <br>
+          <input type="phone" formControlName="phone" placeholder="Phone">
+          <span *ngIf="(phone.touched ||phone.dirty) && phone.invalid && phone.errors.required">
+            Phone no is required.
+          </span>
+        </div>
+        <br>
+        <br>
+        <div class="form-control">
+          <label for="gender">Gender</label>
+          <br>
+          <input type="gender" formControlName="gender" placeholder="Gender">
+          <span *ngIf="(gender.touched ||gender.dirty) && gender.invalid && gender.errors.required">
+            Gender is required.
+          </span>
+        </div>
+        <br>
+        <br>
+        <div class="form-control">
+          <label for="address">Address</label>
+          <br>
+          <input type="address" formControlName="address" placeholder="Gender">
+          <span *ngIf="(address.touched ||address.dirty) && address.invalid && address.errors.required">
+            Address is required.
+          </span>
+        </div>
+        <br>
+        <br>
+        <div class="form-control">
+          <label>Category</label>
+          <br>
+          <label *ngFor="let category of categories">
+            <input type="radio" formControlName="category" [value]="category">{{category}}
+          </label>
+          <!-- <span *ngIf="category.errors.required">
+            category is required.
+          </span> -->
+        </div>
+        <br>
+        <br>
+        <button [disabled]="!registerForm.valid" data-toggle="modal" data-target="#myModal" (click)="abc()">Submit</button>
+      </div>
+    </form>
+  </div>

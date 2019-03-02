@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginFormDoneeComponent } from './login-form-donee/login-form-donee.component';
 import { DoneeAccComponent } from './donee-acc/donee-acc.component';
 import { DonorAccComponent } from './donor-acc/donor-acc.component';
+import { LoginFormManagerComponent } from './login-form-manager/login-form-manager.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { DonorAccComponent } from './donor-acc/donor-acc.component';
     LoginFormComponent,
     LoginFormDoneeComponent,
     DoneeAccComponent,
-    DonorAccComponent
+    DonorAccComponent,
+    LoginFormManagerComponent
   ],
   imports: [
     BrowserModule,

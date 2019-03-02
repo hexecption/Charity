@@ -34,8 +34,8 @@ export class LoginFormComponent implements OnInit {
     console.log(this.registerForm.value);
     this.svc.postDonor(this.registerForm.value)
       .subscribe(resp => console.log(resp));
-      
-      
+      this.router.navigate(['./accDonor']);
+      //      this.abc();
   }
 
   abc() {

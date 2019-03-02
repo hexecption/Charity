@@ -7,7 +7,7 @@ import { Transaction } from './transaction.model';
 import { Donee } from './donee.model';
 import { DoneeAcc } from './doneeAcc.model';
 import { DonorAcc } from './donorAcc.model';
-import { resource } from 'selenium-webdriver/http';
+// import { resource } from 'selenium-webdriver/http';
 
 @Injectable({
   providedIn: 'root'
@@ -76,6 +76,16 @@ export class DataService {
       })
       );
 
+  }
+
+  postManager(manager:any):Observable<any>{
+    return this._http.post('http://localhost:3000/api/Manager',manager)
+    .pipe(map((data: any) => {
+      console.log(data);
+      // this.d = data;
+      // console.log(this.d);
+    })
+    );
   }
 
   postTransaction(trans: any): Observable<any> {

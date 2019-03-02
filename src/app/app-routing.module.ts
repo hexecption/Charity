@@ -9,6 +9,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { LoginFormDoneeComponent } from './login-form-donee/login-form-donee.component';
 import { DoneeAccComponent } from './donee-acc/donee-acc.component';
 import { DonorAccComponent } from './donor-acc/donor-acc.component';
+import { LoginFormManagerComponent } from './login-form-manager/login-form-manager.component';
 
 
 
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path:'registerDonee',
     component:LoginFormDoneeComponent
+  },
+  {
+    path:'registerManager',
+    component:LoginFormManagerComponent
   },
   {
     path:'accDonee',
