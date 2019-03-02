@@ -3,7 +3,7 @@
 </p>
 <div class="container">
   <h3>Account of Donee</h3>
-  <form [formGroup]="doneeAccForm" (ngSubmit)="sendDonor()">
+  <form [formGroup]="doneeAccForm" (ngSubmit)="sendDoneeAcc()">
     <div class="form-group">
         <div class="form-control">
             <label for="accountId">Account_ID</label>
@@ -43,4 +43,20 @@
       <button [disabled]="!doneeAccForm.valid" >Submit</button>
     </div>
   </form>
+</div>
+<div>
+  <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h3>Thank You for registering</h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
+         <!-- <button type="button" class="btn btn-default" (click)="abc()"> Go to Account </button>  -->
+      </div>
+    </div>
+  </div>
+
+</div>
 </div>

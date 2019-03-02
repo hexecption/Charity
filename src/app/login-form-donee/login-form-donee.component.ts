@@ -31,6 +31,11 @@ export class LoginFormDoneeComponent implements OnInit {
       .subscribe(resp => console.log(resp));
 
   }
+
+  abc() {
+    this.router.navigate(['./accDonor']);
+  }
+
   // navigateTo() {
   //   this.router.navigate['doneeAcc'];
   //router.navigate['/accDonee'];
