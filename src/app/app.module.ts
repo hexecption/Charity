@@ -16,6 +16,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginFormDoneeComponent } from './login-form-donee/login-form-donee.component';
 import { DoneeAccComponent } from './donee-acc/donee-acc.component';
 import { DonorAccComponent } from './donor-acc/donor-acc.component';
+<<<<<<< HEAD
+import { LoginFormManagerComponent } from './login-form-manager/login-form-manager.component';
+=======
+import { RankingComponent } from './ranking/ranking.component';
+<<<<<<< HEAD
+import { TimelineComponent } from './timeline/timeline.component';
+=======
+>>>>>>> f9fd35a101a4dd9da1d5944d1e0dcce0917c07c0
+>>>>>>> 6fd3cecba6232ee9faa5494b23118c7824fa7a75
 
 
 @NgModule({
@@ -31,7 +40,17 @@ import { DonorAccComponent } from './donor-acc/donor-acc.component';
     LoginFormComponent,
     LoginFormDoneeComponent,
     DoneeAccComponent,
-    DonorAccComponent
+    DonorAccComponent,
+<<<<<<< HEAD
+    RankingComponent,
+    TimelineComponent
+=======
+<<<<<<< HEAD
+    LoginFormManagerComponent
+=======
+    RankingComponent
+>>>>>>> f9fd35a101a4dd9da1d5944d1e0dcce0917c07c0
+>>>>>>> 6fd3cecba6232ee9faa5494b23118c7824fa7a75
   ],
   imports: [
     BrowserModule,
