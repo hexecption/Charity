@@ -1,0 +1,46 @@
+<p>
+  donee-acc works!
+</p>
+<div class="container">
+  <h3>Account of Donee</h3>
+  <form [formGroup]="doneeAccForm" (ngSubmit)="sendDonor()">
+    <div class="form-group">
+        <div class="form-control">
+            <label for="accountId">Account_ID</label>
+            <br>
+            <input type="accountId" formControlName="accountId" placeholder="Account_Id">
+            <span *ngIf="(accountId.touched ||accountId.dirty) && accountId.invalid && accountId.errors.required">
+                Account Id is required.
+            </span>
+          </div>
+          <br>
+          <br>
+
+          <div class="form-control">
+              <label for="balance">Balance</label>
+              <br>
+              <input type="balance" formControlName="balance" placeholder="Balance">
+              <span *ngIf="(balance.touched ||balance.dirty) && balance.invalid && balance.errors.required">
+                  Balance required to proceed.
+              </span>
+            </div>
+            <br>
+            <br>
+      <div class="form-control">
+        <label for="username">Username</label>
+        <br>
+        <input type="username" formControlName="username" placeholder=" Username">
+        <span *ngIf="(username.touched ||username.dirty) && username.invalid && username.errors.required">
+          Username is required.
+        </span>
+      </div>
+      <br>
+      <br>
+      
+      <br>
+      <br>
+      
+      <button [disabled]="!doneeAccForm.valid" >Submit</button>
+    </div>
+  </form>
+</div>
