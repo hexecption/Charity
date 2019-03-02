@@ -14,11 +14,8 @@ import { DataService } from './data.service';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginFormDoneeComponent } from './login-form-donee/login-form-donee.component';
-<<<<<<< HEAD
 import { DoneeAccComponent } from './donee-acc/donee-acc.component';
-=======
 import { DonorAccComponent } from './donor-acc/donor-acc.component';
->>>>>>> 11f450a2f4df112f396d6432c9d07cadbf0acca6
 
 
 @NgModule({
@@ -33,11 +30,8 @@ import { DonorAccComponent } from './donor-acc/donor-acc.component';
     ContactComponent,
     LoginFormComponent,
     LoginFormDoneeComponent,
-<<<<<<< HEAD
-    DoneeAccComponent
-=======
+    DoneeAccComponent,
     DonorAccComponent
->>>>>>> 11f450a2f4df112f396d6432c9d07cadbf0acca6
   ],
   imports: [
     BrowserModule,

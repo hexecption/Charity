@@ -18,15 +18,15 @@ export class DoneeAccComponent implements OnInit {
       accountId: this.fb.control('', [Validators.required]),
       balance: this.fb.control('', [Validators.required]),
       username: this.fb.control('', [Validators.required])
-      
-      
+
+
     });
   }
-  // sendDoneeAcc() {
-  //   console.log(this.registerForm.value);
-  //   this.svc.postDonor(this.registerForm.value)
-  //     .subscribe(resp => console.log(resp));
-  // }
+  sendDoneeAcc() {
+    console.log(this.doneeAccForm.value);
+    this.svc.postDoneeAcc(this.doneeAccForm.value)
+      .subscribe(resp => console.log(resp));
+  }
 
   get accountId() {
     return this.doneeAccForm.get('accountId');
@@ -37,6 +37,6 @@ export class DoneeAccComponent implements OnInit {
   get username() {
     return this.doneeAccForm.get('username');
   }
-  
- 
+
+
 }
