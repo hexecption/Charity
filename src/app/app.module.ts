@@ -14,6 +14,7 @@ import { DataService } from './data.service';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginFormDoneeComponent } from './login-form-donee/login-form-donee.component';
+import { DoneeAccComponent } from './donee-acc/donee-acc.component';
 import { DonorAccComponent } from './donor-acc/donor-acc.component';
 
 
@@ -29,6 +30,7 @@ import { DonorAccComponent } from './donor-acc/donor-acc.component';
     ContactComponent,
     LoginFormComponent,
     LoginFormDoneeComponent,
+    DoneeAccComponent,
     DonorAccComponent
   ],
   imports: [

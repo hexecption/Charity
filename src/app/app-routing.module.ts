@@ -7,7 +7,9 @@ import { StoriesComponent } from './stories/stories.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { LoginFormDoneeComponent } from './login-form-donee/login-form-donee.component';
+import { DoneeAccComponent } from './donee-acc/donee-acc.component';
 import { DonorAccComponent } from './donor-acc/donor-acc.component';
+
 
 
 const routes: Routes = [
@@ -39,6 +41,11 @@ const routes: Routes = [
   {
     path:'registerDonee',
     component:LoginFormDoneeComponent
+  },
+  {
+    path:'doneeAcc',
+    component:DoneeAccComponent
+    
   },
   {
     path:'donorAcc',
