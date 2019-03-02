@@ -1,6 +1,6 @@
 <div class="container">
   <h3>Registration form for donee</h3>
-  <form [formGroup]="registerForm" (ngSubmit)="sendDonor()">
+  <form [formGroup]="registerForm" (ngSubmit)="sendDonee()">
     <div class="form-group">
       <div class="form-control">
         <label for="username">Username</label>
@@ -83,15 +83,16 @@
     </div>
   </form>
 </div>
-<div class="modal-dialog">
-  <div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body">
-        <h3>Thank You for registering</h3>
+        <h3>Thank You for your donation</h3>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
     </div>
+
   </div>
 </div>

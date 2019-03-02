@@ -38,11 +38,11 @@
       <div class="form-control">
         <label for="token">Token</label>
         <br>
-        <button (click)="randomInt(1,100)" >generate no</button>
-        <input type="token" formControlName="token" placeholder="Token" [ngModel]="randNum"> 
-        <span *ngIf="(token.dirty || token.touched) && token.invalid && token.errors.required">
+        <!-- <button (click)="randomInt(1,100)" >generate no</button> -->
+        <input type="token" formControlName="token" placeholder="Token" > <!--[ngModel]="randNum"-->
+        <!-- <span *ngIf="(token.dirty || token.touched) && token.invalid && token.errors.required">
           Token is required.
-        </span>
+        </span> -->
 
       </div>
       <br>

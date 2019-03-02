@@ -10,7 +10,7 @@ import { DataService } from '../data.service';
 export class FormComponent implements OnInit {
   // categories = ['Welfare', 'Education', 'Orphanage'];
   donateForm: FormGroup;
-  randNum: number;
+  //randNum: string;
   constructor(private fb: FormBuilder, private svc: DataService) { }
 
   ngOnInit() {
@@ -43,11 +43,10 @@ export class FormComponent implements OnInit {
   //   doc.save('test.pdf');
   // }
 
-  randomInt(min, max) {
-    this.randNum = Math.floor(Math.random() * (max - min + 1));
-    console.log(this.randNum);
-    //this.fb.control.token=this.randNum;
-  }
+  // randomInt(min, max) {
+  //   this.randNum = Math.floor(Math.random() * (max - min + 1));
+  //   console.log(this.randNum);
+  // }
   log() {
     console.log(this.donateForm.value);
   }

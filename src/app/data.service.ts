@@ -3,14 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Donor } from './donor.model';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { Transaction } from './transactiom.model';
+import { Transaction } from './transaction.model';
 import { Donee} from './donee.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  // apiUrl='http://localhost:3000/api/Donor';
   d: Donor;
   t: Transaction;
   d1:Donee;
@@ -28,7 +27,7 @@ export class DataService {
   }
 
   postDonee(donee: any): Observable<any> {
-    return this._http.post('', donee)
+    return this._http.post('http://localhost:3000/api/Donee', donee)
       .pipe(map((data: Donee) => {
         console.log(data);
         this.d = data;
@@ -38,7 +37,7 @@ export class DataService {
 
   }
   postTransaction(trans: any): Observable<any> {
-    return this._http.post('', trans)
+    return this._http.post('http://localhost:3000/api/Donor_Manager', trans)
       .pipe(map((data: Transaction) => {
         console.log(data);
         this.t = data;
