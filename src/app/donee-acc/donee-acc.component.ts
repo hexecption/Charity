@@ -18,8 +18,6 @@ export class DoneeAccComponent implements OnInit {
       accountId: this.fb.control('', [Validators.required]),
       balance: this.fb.control('', [Validators.required]),
       username: this.fb.control('', [Validators.required])
-
-
     });
   }
   sendDoneeAcc() {
