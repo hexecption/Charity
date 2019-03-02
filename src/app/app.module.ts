@@ -17,6 +17,7 @@ import { LoginFormDoneeComponent } from './login-form-donee/login-form-donee.com
 import { DoneeAccComponent } from './donee-acc/donee-acc.component';
 import { DonorAccComponent } from './donor-acc/donor-acc.component';
 import { RankingComponent } from './ranking/ranking.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { RankingComponent } from './ranking/ranking.component';
     LoginFormDoneeComponent,
     DoneeAccComponent,
     DonorAccComponent,
-    RankingComponent
+    RankingComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,

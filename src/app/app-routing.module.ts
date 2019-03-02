@@ -9,6 +9,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { LoginFormDoneeComponent } from './login-form-donee/login-form-donee.component';
 import { DoneeAccComponent } from './donee-acc/donee-acc.component';
 import { DonorAccComponent } from './donor-acc/donor-acc.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 
 
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'stories',
     component: StoriesComponent
+  },
+  {
+    path: 'timeline',
+    component: TimelineComponent
   },
   {
     path: 'home',
