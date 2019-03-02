@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { Transaction } from './transactiom.model';
 import { Donee} from './donee.model';
 import { DoneeAcc } from './doneeAcc.model';
+import { DonorAcc } from './donorAcc.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,7 @@ export class DataService {
   t: Transaction;
   d1:Donee;
   d2:DoneeAcc;
+  d3:DonorAcc;
   constructor(private _http: HttpClient) { }
 
   postDonor(donor: any): Observable<any> {
@@ -28,8 +30,18 @@ export class DataService {
       );
 
   }
-postDoneeAcc(doneeAccnt:any):Observable<any>{
-  return this._http.post('http://localhost:3000/api/Donor', doneeAccnt)
+  postDonorAcc(donorAcc: any): Observable<any> {
+    return this._http.post('http://localhost:3000/api/Donor', donorAcc)
+      .pipe(map((data: DonorAcc) => {
+        console.log(data);
+        this.d3 = data;
+        console.log(this.d3);
+      })
+      );
+
+  }
+postDoneeAcc(doneeAcc:any):Observable<any>{
+  return this._http.post('', doneeAcc)
     .pipe(map((data: DoneeAcc) => {
       console.log(data);
       this.d2 = data;

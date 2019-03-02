@@ -43,12 +43,12 @@ const routes: Routes = [
     component:LoginFormDoneeComponent
   },
   {
-    path:'doneeAcc',
+    path:'accDonee',
     component:DoneeAccComponent
     
   },
   {
-    path:'donorAcc',
+    path:'accDonor',
     component: DonorAccComponent
   }
   
