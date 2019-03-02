@@ -29,6 +29,9 @@ export class DataService {
       );
 
   }
+  // postDonorAcc(donorAcc:any):Observable<any>{
+  //   return this._http.post('http://localhost:3000/api/Donor', donorAcc)
+  //     .pipe(map((data: DonorAcc) => {
   postDonorAcc(donorAccnt: any): Observable<any> {
     const donorAcc = {
       $class: 'org.charity.Donor_Account',

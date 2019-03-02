@@ -20,6 +20,8 @@ import { LoginFormManagerComponent } from './login-form-manager/login-form-manag
 import { RankingComponent } from './ranking/ranking.component';
 import { ManagerAccComponent } from './manager-acc/manager-acc.component';
 import { Form1Component } from './form1/form1.component';
+import { TimelineComponent } from './timeline/timeline.component';
+
 
 
 @NgModule({
