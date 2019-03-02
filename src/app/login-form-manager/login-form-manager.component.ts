@@ -2,13 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '.././data.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
 @Component({
-  selector: 'app-login-form-donee',
-  templateUrl: './login-form-donee.component.html',
-  styleUrls: ['./login-form-donee.component.scss']
+  selector: 'app-login-form-manager',
+  templateUrl: './login-form-manager.component.html',
+  styleUrls: ['./login-form-manager.component.scss']
 })
-export class LoginFormDoneeComponent implements OnInit {
+export class LoginFormManagerComponent implements OnInit {
   categories = ['Welfare', 'Education', 'Orphanage'];
   registerForm: FormGroup;
   constructor(private fb: FormBuilder, private svc: DataService, private router: Router) { }
@@ -24,12 +23,13 @@ export class LoginFormDoneeComponent implements OnInit {
       category: this.fb.control('', [Validators.required])
 
     });
+
   }
-  sendDonee() {
+  sendManager() {
     console.log(this.registerForm.value);
-    this.svc.postDonee(this.registerForm.value)
+    this.svc.postManager(this.registerForm.value)
       .subscribe(resp => console.log(resp));
-    this.router.navigate(['./accDonor']);
+    //this.router.navigate(['./accDonor']);
 
   }
 
@@ -54,5 +54,6 @@ export class LoginFormDoneeComponent implements OnInit {
   get category() {
     return this.registerForm.get('category');
   }
+
 
 }
