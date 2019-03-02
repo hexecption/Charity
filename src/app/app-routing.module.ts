@@ -10,7 +10,8 @@ import { LoginFormDoneeComponent } from './login-form-donee/login-form-donee.com
 import { DoneeAccComponent } from './donee-acc/donee-acc.component';
 import { DonorAccComponent } from './donor-acc/donor-acc.component';
 import { LoginFormManagerComponent } from './login-form-manager/login-form-manager.component';
-
+import { ManagerAccComponent } from './manager-acc/manager-acc.component';
+import { Form1Component } from './form1/form1.component';
 
 
 const routes: Routes = [
@@ -30,7 +31,7 @@ const routes: Routes = [
     path: 'contact',
     component: ContactComponent
   },
-  
+
   {
     path: 'form',
     component: FormComponent
@@ -40,23 +41,30 @@ const routes: Routes = [
     component: LoginFormComponent
   },
   {
-    path:'registerDonee',
-    component:LoginFormDoneeComponent
+    path: 'registerDonee',
+    component: LoginFormDoneeComponent
   },
   {
-    path:'registerManager',
-    component:LoginFormManagerComponent
+    path: 'registerManager',
+    component: LoginFormManagerComponent
   },
   {
-    path:'accDonee',
-    component:DoneeAccComponent
-    
+    path: 'accDonee',
+    component: DoneeAccComponent
+
   },
   {
-    path:'accDonor',
+    path: 'accDonor',
     component: DonorAccComponent
+  },
+  {
+    path: 'accManager',
+    component: ManagerAccComponent
+  },
+  {
+    path: 'form1',
+    component: Form1Component
   }
-  
 
 ];
 

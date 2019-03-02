@@ -7,7 +7,6 @@ import { Transaction } from './transaction.model';
 import { Donee } from './donee.model';
 import { DoneeAcc } from './doneeAcc.model';
 import { DonorAcc } from './donorAcc.model';
-// import { resource } from 'selenium-webdriver/http';
 
 @Injectable({
   providedIn: 'root'
@@ -31,11 +30,11 @@ export class DataService {
 
   }
   postDonorAcc(donorAccnt: any): Observable<any> {
-    const donorAcc={
+    const donorAcc = {
       $class: 'org.charity.Donor_Account',
       accountId: donorAccnt.accountId,
-      balance: donorAccnt.balance,
-      owner: 'resource:org.charity.Donor#'+donorAccnt.username
+      balance_donor: donorAccnt.balance,
+      owner: 'resource:org.charity.Donor#' + donorAccnt.username
 
     };
     console.log(donorAcc);
@@ -49,7 +48,7 @@ export class DataService {
 
   }
   postDonee(donee: any): Observable<any> {
-    
+
     return this._http.post('http://localhost:3000/api/Donee', donee)
       .pipe(map((data: Donee) => {
         console.log(data);
@@ -60,11 +59,11 @@ export class DataService {
 
   }
   postDoneeAcc(doneeAccnt: any): Observable<any> {
-    const doneeAcc={
+    const doneeAcc = {
       $class: "org.charity.Donee_Account",
-      accountId:doneeAccnt.accountId,
+      accountId: doneeAccnt.accountId,
       balance: doneeAccnt.balance,
-      owner: 'resource:org.charity.Donee#'+doneeAccnt.username
+      owner: 'resource:org.charity.Donee#' + doneeAccnt.username
 
     };
     console.log(doneeAcc);
@@ -78,16 +77,32 @@ export class DataService {
 
   }
 
-  postManager(manager:any):Observable<any>{
-    return this._http.post('http://localhost:3000/api/Manager',manager)
-    .pipe(map((data: any) => {
-      console.log(data);
-      // this.d = data;
-      // console.log(this.d);
-    })
-    );
+  postManager(manager: any): Observable<any> {
+    return this._http.post('http://localhost:3000/api/Manager', manager)
+      .pipe(map((data: any) => {
+        console.log(data);
+        // this.d = data;
+        // console.log(this.d);
+      })
+      );
   }
+  postManagerAcc(managerAccnt: any): Observable<any> {
+    const managerAcc = {
+      $class: "org.charity.Manager_Account",
+      accountId: managerAccnt.accountId,
+      balance_manager: managerAccnt.balance,
+      owner: 'resource:org.charity.Manager#' + managerAccnt.username
 
+    };
+    console.log(managerAcc);
+    return this._http.post('http://localhost:3000/api/Manager_Account', managerAcc)
+      .pipe(map((data: any) => {
+        console.log(data);
+        // this.d = data;
+        // console.log(this.d);
+      })
+      );
+  }
   postTransaction(trans: any): Observable<any> {
 
     const transactionDetails = {
@@ -100,6 +115,25 @@ export class DataService {
     };
     console.log(transactionDetails);
     return this._http.post('http://localhost:3000/api/Donor_Manager', transactionDetails)
+      .pipe(map((data: any) => {
+        console.log(data);
+        // this.t = data;
+        // console.log(this.t);
+      })
+      );
+  }
+  postTransactionAfter(trans: any): Observable<any> {
+    
+    const transactionDetails1 = {
+      $class: "org.charity.Manager_Donee",
+      from: "resource:org.charity.Manager_Account#" + trans.managerAcc,
+      to: "resource:org.charity.Donee_Account#" + trans.doneeAcc,
+      amount: trans.amount,
+      token: "resource:org.charity.Token#" + trans.token,
+      donee: "resource:org.charity.Donee#" + trans.donee
+    };
+    console.log(transactionDetails1);
+    return this._http.post('http://localhost:3000/api/Manager_Donee', transactionDetails1)
       .pipe(map((data: any) => {
         console.log(data);
         // this.t = data;

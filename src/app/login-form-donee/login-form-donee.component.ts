@@ -29,7 +29,7 @@ export class LoginFormDoneeComponent implements OnInit {
     console.log(this.registerForm.value);
     this.svc.postDonee(this.registerForm.value)
       .subscribe(resp => console.log(resp));
-    this.router.navigate(['./accDonor']);
+    this.router.navigate(['./accDonee']);
 
   }
 

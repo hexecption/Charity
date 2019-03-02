@@ -16,11 +16,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginFormDoneeComponent } from './login-form-donee/login-form-donee.component';
 import { DoneeAccComponent } from './donee-acc/donee-acc.component';
 import { DonorAccComponent } from './donor-acc/donor-acc.component';
-<<<<<<< HEAD
 import { LoginFormManagerComponent } from './login-form-manager/login-form-manager.component';
-=======
 import { RankingComponent } from './ranking/ranking.component';
->>>>>>> f9fd35a101a4dd9da1d5944d1e0dcce0917c07c0
+import { ManagerAccComponent } from './manager-acc/manager-acc.component';
+import { Form1Component } from './form1/form1.component';
 
 
 @NgModule({
@@ -37,11 +36,10 @@ import { RankingComponent } from './ranking/ranking.component';
     LoginFormDoneeComponent,
     DoneeAccComponent,
     DonorAccComponent,
-<<<<<<< HEAD
-    LoginFormManagerComponent
-=======
-    RankingComponent
->>>>>>> f9fd35a101a4dd9da1d5944d1e0dcce0917c07c0
+    LoginFormManagerComponent,
+    RankingComponent,
+    ManagerAccComponent,
+    Form1Component
   ],
   imports: [
     BrowserModule,

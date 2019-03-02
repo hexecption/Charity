@@ -29,7 +29,7 @@ export class LoginFormManagerComponent implements OnInit {
     console.log(this.registerForm.value);
     this.svc.postManager(this.registerForm.value)
       .subscribe(resp => console.log(resp));
-    //this.router.navigate(['./accDonor']);
+    this.router.navigate(['./accManager']);
 
   }
 
