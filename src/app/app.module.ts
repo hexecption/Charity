@@ -16,8 +16,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginFormDoneeComponent } from './login-form-donee/login-form-donee.component';
 import { DoneeAccComponent } from './donee-acc/donee-acc.component';
 import { DonorAccComponent } from './donor-acc/donor-acc.component';
+import { LoginFormManagerComponent } from './login-form-manager/login-form-manager.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { OrderModule } from 'ngx-order-pipe';
+import { ManagerAccComponent } from './manager-acc/manager-acc.component';
+import { Form1Component } from './form1/form1.component';
+import { TimelineComponent } from './timeline/timeline.component';
+
 
 
 
@@ -35,7 +40,12 @@ import { OrderModule } from 'ngx-order-pipe';
     LoginFormDoneeComponent,
     DoneeAccComponent,
     DonorAccComponent,
-    RankingComponent
+    LoginFormManagerComponent,
+    RankingComponent,
+    ManagerAccComponent,
+    Form1Component,
+    TimelineComponent
+    
   ],
   imports: [
     BrowserModule,

@@ -47,9 +47,6 @@ export class FormComponent implements OnInit {
   //   this.randNum = Math.floor(Math.random() * (max - min + 1));
   //   console.log(this.randNum);
   // }
-  log() {
-    console.log(this.donateForm.value);
-  }
   sendTrans() {
     console.log(this.donateForm.value);
     this.svc.postTransaction(this.donateForm.value)

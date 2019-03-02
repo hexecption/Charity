@@ -1,4 +1,5 @@
 <div class="container">
+  
   <h3>Registration form for donor</h3>
   <form [formGroup]="registerForm" (ngSubmit)="sendDonor()" >
     <div class="form-group">
@@ -67,10 +68,11 @@
       </div>
       <br>
       <br>
-      <button [disabled]="!registerForm.valid" data-toggle="modal" data-target="#myModal" (click)="abc()">Submit</button>
+      <button [disabled]="!registerForm.valid" >Submit</button>
     </div>
   </form>
 </div>
+
 <!-- <div>
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">

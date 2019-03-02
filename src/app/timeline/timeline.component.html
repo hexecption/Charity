@@ -1,0 +1,32 @@
+
+
+<div class="container mt-5 mb-5">
+	<div class="row">
+		<div class="col-md-6 offset-md-3">
+			<h4>Track your Donee</h4>
+			<ul class="timeline" *ngFor= "let tr1 of trans1" >
+					
+				<li>
+					<a href="#">{{tr1.unique_Name}} </a>
+					<a href="#" class="float-right">{{tr1.timestamp}}</a>
+					<p>DONOR <br> To: {{tr1.manager}}<br> Token id: {{tr1.token}} <br>Amount: {{tr1.amount}}</p>
+				</li>
+				<li>
+					<a href="#">{{tr1.manager}} </a>
+					<a href="#" class="float-right">{{tr1.timestamp}}</a>
+					<p>MANAGER <br> From: {{tr1.unique_Name}} <br> Token id: {{tr1.token}} <br>Amount: {{tr1.amount}}</p>
+				</li>
+			</ul>
+				<ul class="timeline" *ngFor= "let tr2 of trans2">
+			
+				<li >
+					<a href="#">{{tr2.donee}}</a>
+					<a href="#" class="float-right">{{tr2.timestamp}}</a>
+					<p>DONEE <br> From: {{tr2.unique_Name}} <br>Token id: {{tr2.token}}  <br>Amount: {{tr2.amount}}</p>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+</div>
+

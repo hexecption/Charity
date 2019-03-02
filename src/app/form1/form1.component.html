@@ -1,0 +1,65 @@
+<div class="container">
+  <h3>Donation form</h3>
+  <form [formGroup]="donateForm1" (ngSubmit)="sendTrans()">
+    <div class="form-group">
+      <div class="form-control">
+        <label for="managerAcc">Manager Account</label>
+        <br>
+        <input type="managerAcc" formControlName="managerAcc" placeholder="Manager Account">
+        <span *ngIf="(managerAcc.touched ||managerAcc.dirty) && managerAcc.invalid && managerAcc.errors.required">
+          Manager account no is required.
+        </span>
+      </div>
+      <br>
+      <br>
+      <div class="form-control">
+        <label for="doneeAcc">Donee Account</label>
+        <br>
+        <input type="doneeAcc" formControlName="doneeAcc" placeholder="Donee Account">
+        <span *ngIf="(doneeAcc.dirty || doneeAcc.touched) && doneeAcc.invalid && doneeAcc.errors.required">
+          Donee account is required.
+        </span>
+      </div>
+      <br>
+      <br>
+      <div class="form-control">
+        <label for="amount">Amount</label>
+        <br>
+        <input type="amount" formControlName="amount" placeholder="amount">
+        <span *ngIf="(amount.touched ||amount.dirty) && amount.invalid && amount.errors.required">
+          Amount is required.
+        </span>
+        <span *ngIf="(amount.touched ||amount.dirty) && amount.invalid && amount.errors.invalidNumber">
+          Amount is invalid.
+        </span>
+      </div>
+      <br>
+      <br>
+      <div class="form-control">
+        <label for="token">Token</label>
+        <br>
+        <!-- <button (click)="randomInt(1,100)" >generate no</button> -->
+        <input type="token" formControlName="token" placeholder="Token" > <!--[ngModel]="randNum"-->
+        <!-- <span *ngIf="(token.dirty || token.touched) && token.invalid && token.errors.required">
+          Token is required.
+        </span> -->
+
+      </div>
+      <br>
+      <br>
+      <div class="form-control">
+        <label for="Donee">Donee Name</label>
+        <br>
+        <input type="donee" formControlName="donee" placeholder="Donee Name">
+        <span *ngIf="(donee.dirty || donee.touched) && donee.invalid && donee.errors.required">
+            Donee name is required.
+        </span>
+
+      </div>
+      <br>
+      <br>
+      <button [disabled]="!donateForm1.valid" data-toggle="modal" data-target="#myModal">Submit</button>
+      <!-- <button (click)="downloadPDF()">Download PDF </button> -->
+    </div>
+  </form>
+</div>

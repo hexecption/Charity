@@ -1,45 +1,36 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { DataService } from '.././data.service';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-login-form',
-  templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.scss']
+  selector: 'app-login-form-manager',
+  templateUrl: './login-form-manager.component.html',
+  styleUrls: ['./login-form-manager.component.scss']
 })
-export class LoginFormComponent implements OnInit {
-
+export class LoginFormManagerComponent implements OnInit {
+  categories = ['Welfare', 'Education', 'Orphanage'];
   registerForm: FormGroup;
-  constructor(private fb: FormBuilder, private svc: DataService,private router:Router) { }
+  constructor(private fb: FormBuilder, private svc: DataService, private router: Router) { }
 
   ngOnInit() {
-
-
     this.registerForm = this.fb.group({
       username: this.fb.control('', [Validators.required]),
       name: this.fb.control('', [Validators.required]),
       email: this.fb.control('', [Validators.required, Validators.email]),
       phone: this.fb.control('', [Validators.required]),
       gender: this.fb.control('', [Validators.required]),
-      address: this.fb.control('', [Validators.required])
+      address: this.fb.control('', [Validators.required]),
+      category: this.fb.control('', [Validators.required])
 
     });
-    // ,Validators.pattern("[0-9]{0-10}"
-  }
-  log() {
-    console.log(this.registerForm.value);
-  }
-  sendDonor() {
 
-    console.log(this.registerForm.value);
-    this.svc.postDonor(this.registerForm.value)
-      .subscribe((resp) => console.log(resp));
-      this.router.navigate(['./accDonor']);
-      //      this.abc();
   }
+  sendManager() {
+    console.log(this.registerForm.value);
+    this.svc.postManager(this.registerForm.value)
+      .subscribe(resp => console.log(resp));
+    this.router.navigate(['./accManager']);
 
-  abc() {
-    this.router.navigate(['./accDonor']);
   }
 
   get email() {
@@ -60,5 +51,9 @@ export class LoginFormComponent implements OnInit {
   get address() {
     return this.registerForm.get('address');
   }
+  get category() {
+    return this.registerForm.get('category');
+  }
+
 
 }

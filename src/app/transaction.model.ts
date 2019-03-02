@@ -5,4 +5,5 @@ export class Transaction{
     unique_Name:string;
     token:string;
     manager:string;
+    timestamp:string;
 }
