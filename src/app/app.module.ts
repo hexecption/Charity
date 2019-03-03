@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -18,9 +18,13 @@ import { DoneeAccComponent } from './donee-acc/donee-acc.component';
 import { DonorAccComponent } from './donor-acc/donor-acc.component';
 import { LoginFormManagerComponent } from './login-form-manager/login-form-manager.component';
 import { RankingComponent } from './ranking/ranking.component';
+import { OrderModule } from 'ngx-order-pipe';
 import { ManagerAccComponent } from './manager-acc/manager-acc.component';
 import { Form1Component } from './form1/form1.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { FileuploadComponent } from './fileupload/fileupload.component';
+import { DocComponent } from './doc/doc.component';
+
 
 
 
@@ -42,13 +46,18 @@ import { TimelineComponent } from './timeline/timeline.component';
     RankingComponent,
     ManagerAccComponent,
     Form1Component,
-    TimelineComponent
+    TimelineComponent,
+    FileuploadComponent,
+    DocComponent
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    OrderModule,
+    FormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

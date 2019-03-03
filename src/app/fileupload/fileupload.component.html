@@ -1,0 +1,9 @@
+<input type="file" accept="image/*" (change)="changeListener($event)">
+
+<div *ngIf="image">
+  <h3>Result:</h3>
+  <h4>Base64 encoded:</h4>
+  <p>{{image?.replace("data:image/png;base64,", "")}}</p>
+
+</div>
+
