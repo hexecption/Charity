@@ -13,6 +13,7 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { LoginFormManagerComponent } from './login-form-manager/login-form-manager.component';
 import { ManagerAccComponent } from './manager-acc/manager-acc.component';
 import { Form1Component } from './form1/form1.component';
+import { FileuploadComponent } from './fileupload/fileupload.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'timeline',
     component: TimelineComponent
+  },
+  {
+    path: 'fileupload',
+    component: FileuploadComponent
   },
   {
     path: 'home',

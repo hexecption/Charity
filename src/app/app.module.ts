@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -22,6 +22,7 @@ import { OrderModule } from 'ngx-order-pipe';
 import { ManagerAccComponent } from './manager-acc/manager-acc.component';
 import { Form1Component } from './form1/form1.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { FileuploadComponent } from './fileupload/fileupload.component';
 
 
 
@@ -44,7 +45,8 @@ import { TimelineComponent } from './timeline/timeline.component';
     RankingComponent,
     ManagerAccComponent,
     Form1Component,
-    TimelineComponent
+    TimelineComponent,
+    FileuploadComponent
     
   ],
   imports: [
@@ -52,7 +54,8 @@ import { TimelineComponent } from './timeline/timeline.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    OrderModule
+    OrderModule,
+    FormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
