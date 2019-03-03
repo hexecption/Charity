@@ -20,12 +20,12 @@ export class TimelineComponent implements OnInit {
 
   }
   serv(token:any) {
-    this.tokenValue=token
-    console.log(this.tokenValue);
-    this.dataService.getTransaction()
+    this.tokenValue=token;
+    // console.log(this.tokenValue);
+    this.dataService.getTransactionTimeline(this.tokenValue)
     .subscribe(data => { this.trans1 = data, console.log(data) });
 
-    this.dataService.getTrack()
+    this.dataService.getTrack(this.tokenValue)
       .subscribe(data1 => { this.trans2 = data1, console.log(data1) });
   }
 

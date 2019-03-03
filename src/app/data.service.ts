@@ -62,9 +62,11 @@ export class DataService {
   getTransaction(){
     return this._http.get<Transaction[]>('http://localhost:3000/api/Donor_Manager');
   }
-
-  getTrack(){
-    return this._http.get<Track[]>('http://localhost:3000/api/Manager_Donee');
+  getTransactionTimeline(data:any){
+    return this._http.get<Transaction[]>('http://localhost:3000/api/queries/getDonorManager?token=resource%3Aorg.charity.Token%23'+data);
+  }
+  getTrack(data:any){
+    return this._http.get<Track[]>('http://localhost:3000/api/queries/getManagerDonee?token=resource%3Aorg.charity.Token%23'+data);
   }
   postDonee(donee: any): Observable<any> {
 
