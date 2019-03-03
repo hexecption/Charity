@@ -2,6 +2,13 @@
 
 @import url(https://fonts.googleapis.com/css?family=Cedarville+Cursive);
 
+.bgimg{
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("./../../assets/people.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 h1,
 p,
 .div,

@@ -14,6 +14,7 @@ import { LoginFormManagerComponent } from './login-form-manager/login-form-manag
 import { ManagerAccComponent } from './manager-acc/manager-acc.component';
 import { Form1Component } from './form1/form1.component';
 import { FileuploadComponent } from './fileupload/fileupload.component';
+import { DocComponent } from './doc/doc.component';
 
 
 const routes: Routes = [
@@ -74,6 +75,12 @@ const routes: Routes = [
   {
     path: 'form1',
     component: Form1Component
+  },
+  {
+
+    path: 'doc',
+    component: DocComponent
+
   }
 
 ];
