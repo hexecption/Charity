@@ -23,6 +23,7 @@ import { ManagerAccComponent } from './manager-acc/manager-acc.component';
 import { Form1Component } from './form1/form1.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { FileuploadComponent } from './fileupload/fileupload.component';
+import { DocComponent } from './doc/doc.component';
 
 
 
@@ -46,8 +47,9 @@ import { FileuploadComponent } from './fileupload/fileupload.component';
     ManagerAccComponent,
     Form1Component,
     TimelineComponent,
-    FileuploadComponent
-    
+    FileuploadComponent,
+    DocComponent
+  
   ],
   imports: [
     BrowserModule,
