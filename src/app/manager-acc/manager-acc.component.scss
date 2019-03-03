@@ -2,6 +2,14 @@
 //     background-color: rgb(240, 245, 240);
 //   }
 
+
+.bgimg{
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("./../../assets/WhaleFest.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
 .ng-invalid:not(form) {
     background-color: rgb(255, 182, 193);
   }
@@ -24,12 +32,13 @@ label{
     background: none;
 }
 .container{
-    margin-top: 150px;
+    //margin-top: 150px;
   width: 30%;
+  height: 600px;
   z-index: 100;
   /* background: white; */
   background-color: lightblue;
-  margin-top: 30px;
+  //margin-top: 30px;
   padding: 10px;
   border-radius: 10px;
 }

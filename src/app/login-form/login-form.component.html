@@ -1,3 +1,5 @@
+<div class="bgimg">
+
 <div class="container">
   <h3>Registration form for donor</h3>
   <form [formGroup]="registerForm" (ngSubmit)="sendDonor()" >
@@ -70,6 +72,8 @@
       <button [disabled]="!registerForm.valid" >Submit</button>
     </div>
   </form>
+</div>
+
 </div>
 <!-- <div>
     <div class="modal fade" id="myModal" role="dialog">

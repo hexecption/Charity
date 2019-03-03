@@ -41,7 +41,8 @@ import { TimelineComponent } from './timeline/timeline.component';
     LoginFormManagerComponent,
     RankingComponent,
     ManagerAccComponent,
-    Form1Component
+    Form1Component,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,
