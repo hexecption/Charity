@@ -2,7 +2,7 @@
 
 <div class="container">
   
-  <h3>Registration form for donor</h3>
+  <h3><br>Registration form for donor</h3>
   <form [formGroup]="registerForm" (ngSubmit)="sendDonor()" >
     <div class="form-group">
       <div class="form-control">
@@ -69,7 +69,7 @@
         </span>
       </div>
       <br>
-      <br>
+      <br><br>
       <button [disabled]="!registerForm.valid" >Submit</button>
     </div>
   </form>

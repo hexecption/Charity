@@ -1,10 +1,10 @@
 <div class="bgimg">
 
 <div class="container">
-  <h3>Donation form</h3>
+  <h3><br>Donation form</h3>
   <form [formGroup]="donateForm" (ngSubmit)="sendTrans()">
     <div class="form-group">
-      <div class="form-control">
+      <div class="form-control"><br>
         <label for="donorAcc">Donor Account</label>
         <br>
         <input type="donorAcc" formControlName="donorAcc" placeholder="Donor Account">
@@ -13,7 +13,7 @@
         </span>
       </div>
       <br>
-      <br>
+      <br><br>
       <div class="form-control">
         <label for="managerAcc">Manager Account</label>
         <br>
@@ -59,7 +59,7 @@
 
       </div>
       <br>
-      <br>
+      <br><br>
       <button [disabled]="!donateForm.valid" data-toggle="modal" data-target="#myModal">Submit</button>
       <!-- <button (click)="downloadPDF()">Download PDF </button> -->
     </div>

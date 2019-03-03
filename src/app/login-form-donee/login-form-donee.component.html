@@ -1,7 +1,7 @@
 <div class="bgimg"> 
 
 <div class="container">
-  <h3>Registration form for donee</h3>
+  <h3><br>Registration form for donee</h3>
   <form [formGroup]="registerForm" (ngSubmit)="sendDonee()">
     <div class="form-group">
       <div class="form-control">
@@ -80,7 +80,7 @@
         </span> -->
       </div>
       <br>
-      <br>
+      <br><br>
       <button [disabled]="!registerForm.valid" data-toggle="modal" data-target="#myModal" (click)="abc()">Submit</button>
     </div>
   </form>
