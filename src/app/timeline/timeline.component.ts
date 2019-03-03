@@ -9,22 +9,25 @@ import { Transaction } from '../transaction.model';
   styleUrls: ['./timeline.component.scss']
 })
 export class TimelineComponent implements OnInit {
-  
- trans1: Transaction[];
- trans2: Track[];
+  tokenValue:string;
+  trans1: Transaction[];
+  trans2: Track[];
 
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.getTransaction()
-    .subscribe( data => {this.trans1 = data, console.log(data) });
 
-    this.dataService.getTrack()
-    .subscribe( data1 => {this.trans2 = data1, console.log(data1) });
 
   }
-  
- 
- 
+  serv(token:any) {
+    this.tokenValue=token
+    console.log(this.tokenValue);
+    this.dataService.getTransaction()
+    .subscribe(data => { this.trans1 = data, console.log(data) });
+
+    this.dataService.getTrack()
+      .subscribe(data1 => { this.trans2 = data1, console.log(data1) });
+  }
+
 
 }

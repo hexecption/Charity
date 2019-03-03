@@ -18,33 +18,14 @@ export class FormComponent implements OnInit {
       donorAcc: this.fb.control('', [Validators.required]),
       managerAcc: this.fb.control('', [Validators.required]),
       amount: this.fb.control('', [Validators.required, Validators.min(100)]),
-      token: this.fb.control(''),
+      token: this.fb.control('',Validators.required),
       manager: this.fb.control('', Validators.required)
     });
 
   }
 
-  // public downloadPDF() {
-  //   let doc = new jsPDF();
-
-  //   let specialElementHandlers = {
-  //     '#editor': function (element, renderer) {
-  //       return true;
-  //     }
-  //   }
-
-  //   let content = this.content.nativeElement;
-
-  //   doc.fromHTML(content.innerHTML, 15, 15, {
-  //     'width': 190,
-  //     'elementhandlers': specialElementHandlers
-  //   });
-
-  //   doc.save('test.pdf');
-  // }
-
-  // randomInt(min, max) {
-  //   this.randNum = Math.floor(Math.random() * (max - min + 1));
+  //   randomInt(min: number, max: number) {
+  //   this.randNum = (Math.floor(Math.random() * (max - min + 1)).toString());
   //   console.log(this.randNum);
   // }
   sendTrans() {
